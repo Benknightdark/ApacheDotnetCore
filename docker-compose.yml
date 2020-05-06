@@ -1,0 +1,11 @@
+webserver:
+  #image: httpd:latest
+  build: ./apache
+  ports:
+    - 8080:80
+webapi:
+  build: .
+  ports:
+    - 8989:80    
+  # volumes:
+  #   - .:/var/www/html
