@@ -1,2 +1,3 @@
 FROM httpd:latest
-COPY ./httpd.conf /conf/
+RUN rm /usr/local/apache2/conf/httpd.conf
+COPY ./httpd.conf /usr/local/apache2/conf/
